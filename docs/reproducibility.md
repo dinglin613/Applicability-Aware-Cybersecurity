@@ -31,7 +31,8 @@ reported case studies.
 
 ## Reproducibility Notes
 
-The paper separates applicability inference, forward risk evaluation, and
-deterministic IEC 61850 feasibility constraints. The documentation follows the
-same separation so that each experimental component can be inspected without
-mixing CVE-to-device inference details with scheduling feasibility assumptions.
+The paper treats applicability inference, forward risk evaluation, and
+IEC 61850-derived feasibility constraints as separately inspectable components.
+The documentation follows the same organization so that CVE-to-device inference
+details, risk-evaluation assumptions, and scheduling-feasibility constraints can
+be examined independently.

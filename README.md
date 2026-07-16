@@ -4,9 +4,11 @@ Reproducibility documentation for the paper:
 
 **Applicability-Aware Cybersecurity Patch Scheduling for IEC 61850 Substations**
 
-The paper studies cybersecurity patch scheduling for IEC 61850 substations when
-firmware patch actions must satisfy deterministic operational constraints and
-CVE-to-device applicability is inferred from advisory text and asset metadata.
+The paper presents an applicability-aware cybersecurity patch-scheduling
+framework for IEC 61850 substations that connects CVE-to-device applicability
+inference from advisory text and asset metadata with cyber-physical risk
+evaluation and feasible patch sequencing under IEC 61850-derived operational
+constraints.
 
 This repository records the experimental settings, prompt template, benchmark
 construction, SCD-derived case setup, and additional ablation and sensitivity
