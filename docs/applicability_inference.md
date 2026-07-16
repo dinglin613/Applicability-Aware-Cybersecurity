@@ -1,9 +1,9 @@
 # Applicability-Inference Implementation
 
-This document describes the offline LLM applicability-inference step. Each CVE
-is evaluated against the full device inventory. Parsed responses are converted
-into a fixed device-CVE applicability matrix `Q`, and the scheduler reads this
-matrix during forward search without calling the model.
+The offline LLM applicability-inference step evaluates each CVE against the full
+device inventory. Parsed responses are converted into a fixed device-CVE
+applicability matrix `Q`, and the scheduler reads this matrix during forward
+search without calling the model.
 
 ## Prompt Template
 

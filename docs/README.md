@@ -4,7 +4,8 @@ This directory contains reproducibility documentation for the paper
 **Applicability-Aware Cybersecurity Patch Scheduling for IEC 61850
 Substations**.
 
-Start with [`reproducibility.md`](reproducibility.md) for a high-level map.
+[`reproducibility.md`](reproducibility.md) provides a high-level map of the
+materials.
 
 ## Files
 

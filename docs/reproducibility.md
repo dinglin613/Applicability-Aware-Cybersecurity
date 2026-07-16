@@ -1,13 +1,11 @@
 # Reproducibility Documentation
 
-This document summarizes the reproducibility materials associated with the
-paper **Applicability-Aware Cybersecurity Patch Scheduling for IEC 61850
-Substations**.
+Reproducibility materials for the paper
+**Applicability-Aware Cybersecurity Patch Scheduling for IEC 61850
+Substations** are organized around the main experimental modules.
 
-The repository is organized around the main experimental modules in the paper.
-Each document is written to be read independently from the manuscript while
-preserving the terminology and numerical settings used in the reported case
-studies.
+The documents preserve the terminology and numerical settings used in the
+reported case studies.
 
 ## Documentation Map
 
@@ -19,7 +17,7 @@ studies.
 | SCD-derived real-CVE scheduling case | [`scd_case.md`](scd_case.md) |
 | Physical-impact settings and additional robustness checks | [`ablation_sensitivity.md`](ablation_sensitivity.md) |
 
-## What Is Included
+## Materials
 
 - Representative deterministic inputs used to generate constraints C1--C7.
 - Prompt template and JSON schema for the offline applicability-inference call.
@@ -31,16 +29,9 @@ studies.
 - Physical-impact evaluation settings, search-setting ablation, and
   uncertain-weight sensitivity results.
 
-## What Is Not Included
-
-- Source code for the scheduler or LLM invocation pipeline.
-- Proprietary utility asset inventories.
-- Operational deployment data from a live substation.
-- API keys, model credentials, or vendor-private firmware information.
-
 ## Reproducibility Notes
 
 The paper separates applicability inference, forward risk evaluation, and
 deterministic IEC 61850 feasibility constraints. The documentation follows the
-same separation so that readers can inspect each experimental component without
+same separation so that each experimental component can be inspected without
 mixing CVE-to-device inference details with scheduling feasibility assumptions.

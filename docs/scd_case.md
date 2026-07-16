@@ -1,7 +1,7 @@
 # SCD-Derived Scheduling Case
 
-This document describes the topology extraction, asset-to-role mapping, and CVE
-assignment used for the SCD-derived scheduling case.
+The SCD-derived scheduling case combines a published IEC 61850 topology with
+representative multi-vendor asset metadata and real ICS CVEs.
 
 ## SCD Inventory and Topology
 

@@ -1,7 +1,7 @@
 # Real-CVE Benchmark and Annotation
 
-This document describes the construction, annotation protocol, and matcher
-implementations for the real-CVE applicability benchmark.
+The real-CVE applicability benchmark evaluates CVE-to-device matching against
+human-reconciled labels and same-vendor/product-lineage hard negatives.
 
 ## Benchmark Construction
 

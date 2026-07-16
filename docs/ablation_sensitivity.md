@@ -1,7 +1,7 @@
 # Additional Ablation and Sensitivity Results
 
-This document reports additional physical-impact evaluation settings,
-search-setting ablations, and uncertain-weight sensitivity results.
+Additional checks cover physical-impact evaluation settings, search-setting
+ablations, and uncertain-weight sensitivity results.
 
 ## Physical-Impact Evaluation Settings
 
