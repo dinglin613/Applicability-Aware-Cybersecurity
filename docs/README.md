@@ -11,6 +11,8 @@ materials.
 
 - [`constraint_generation.md`](constraint_generation.md): deterministic inputs
   used to generate operational constraints C1--C7.
+- [`notation.md`](notation.md): notation used in the topology, applicability,
+  risk, scheduling, and evaluation components.
 - [`applicability_inference.md`](applicability_inference.md): LLM prompt,
   response schema, post-processing rules, and representative applicability
   judgments.
