@@ -7,17 +7,17 @@ part of the framework in which they appear.
 
 | Symbol | Meaning |
 | --- | --- |
-| $\mathcal{T}=(\mathcal{D},\mathcal{F},\mathcal{E})$ | Cyber-physical IEC 61850 topology. |
+| $\mathcal{T}$ | Cyber-physical IEC 61850 topology, $\mathcal{T}=(\mathcal{D},\mathcal{F},\mathcal{E})$. |
 | $\mathcal{D}$ | Set of cyber-relevant devices. |
-| $N=\lvert\mathcal{D}\rvert$ | Number of cyber-relevant devices. |
+| $N$ | Number of cyber-relevant devices, $N=\lvert\mathcal{D}\rvert$. |
 | $d_i$ | Device indexed by $i$. |
 | $\mathcal{F}$ | Set of operational functions. |
-| $M=\lvert\mathcal{F}\rvert$ | Number of operational functions; used in complexity expressions. |
+| $M$ | Number of operational functions, $M=\lvert\mathcal{F}\rvert$; used in complexity expressions. |
 | $f$ | Operational-function index. |
 | $f_1,\ldots,f_4$ | SCADA Observability, Substation Control, Protection Integrity, and Automation Continuity. |
 | $\mathcal{E}$ | MMS client-server and GOOSE publisher-subscriber communication links. |
 | $\mathcal{F}_i$ | Set of functions served by device $d_i$. |
-| $\mathcal{D}_f$ | Devices serving function $f$: $\{d_i\in\mathcal{D}:f\in\mathcal{F}_i\}$. |
+| $\mathcal{D}_f$ | Devices serving function $f$, $\mathcal{D}_f=\{d_i\in\mathcal{D}:f\in\mathcal{F}_i\}$. |
 | $\mathcal{Z}$ | Set of protection zones. |
 | $z$ | Protection-zone index. |
 | $\mathcal{D}_z$ | Devices located in protection zone $z$. |
@@ -29,16 +29,16 @@ part of the framework in which they appear.
 
 | Symbol | Meaning |
 | --- | --- |
-| $\mathcal{V}_i=\{v_{i,1},\ldots,v_{i,K_i}\}$ | Candidate CVE profiles associated with device $d_i$. |
+| $\mathcal{V}_i$ | Candidate CVE profiles associated with device $d_i$, $\mathcal{V}_i=\{v_{i,1},\ldots,v_{i,K_i}\}$. |
 | $K_i$ | Number of candidate CVE profiles for device $d_i$. |
-| $u_i(t)\in\{0,1\}$ | Patch state of device $d_i$; 0 means unpatched and 1 means patched. |
-| $y_i(t)\in\{0,1\}$ | Online state of device $d_i$; 0 means offline during patching and 1 means online. |
-| $\rho_i(t)\in[0,1]$ | Network reachability of device $d_i$. |
+| $u_i(t)$ | Patch state of device $d_i$, with $u_i(t)\in\{0,1\}$; 0 means unpatched and 1 means patched. |
+| $y_i(t)$ | Online state of device $d_i$, with $y_i(t)\in\{0,1\}$; 0 means offline during patching and 1 means online. |
+| $\rho_i(t)$ | Network reachability of device $d_i$, with $\rho_i(t)\in[0,1]$. |
 | $\mathbf{x}_t$ | System state at epoch $t$, containing patch and online states. |
 | $\mathbf{a}_t$ | Set of patch actions selected at epoch $t$. |
-| $a_{i,t}\in\{0,1\}$ | Binary indicator that device $d_i$ is patched at epoch $t$. |
+| $a_{i,t}$ | Binary indicator that device $d_i$ is patched at epoch $t$, with $a_{i,t}\in\{0,1\}$. |
 | $\mathcal{A}_t$ | Feasible action set at epoch $t$. |
-| $m_t\in\{0,1\}$ | Maintenance-window indicator; 1 means epoch $t$ is open. |
+| $m_t$ | Maintenance-window indicator, with $m_t\in\{0,1\}$; 1 means epoch $t$ is open. |
 | $C_{\max}$ | Maximum number of devices that can be patched concurrently. |
 | $Z_{\max}$ | Maximum concurrent outages allowed in each protection zone. |
 | $N_f^{\min}$ | Minimum number of online devices required for function $f$. |
@@ -54,8 +54,8 @@ part of the framework in which they appear.
 | Symbol | Meaning |
 | --- | --- |
 | $c_j$ | Disclosed CVE indexed by $j$. |
-| $Q=\{q_{ij}\}$ | Device-CVE applicability matrix. |
-| $q_{ij}\in[0,1]$ | Applicability weight of CVE $c_j$ to device $d_i$. |
+| $Q$ | Device-CVE applicability matrix, $Q=\{q_{ij}\}$. |
+| $q_{ij}$ | Applicability weight of CVE $c_j$ to device $d_i$, with $q_{ij}\in[0,1]$. |
 | $q_{i,k}$ | Local indexing of the applicability weight for CVE profile $v_{i,k}$. |
 | $r_{ij}^{(m)}$ | Verdict returned by LLM provider $m$ for pair $(c_j,d_i)$. |
 | $q_{ij}^{(m)}$ | Applicability weight mapped from provider $m$'s verdict. |
@@ -67,15 +67,15 @@ part of the framework in which they appear.
 
 | Symbol | Meaning |
 | --- | --- |
-| $e_{i,k}\in[0,1]$ | Normalized exploitability indicator for CVE profile $v_{i,k}$. |
+| $e_{i,k}$ | Normalized exploitability indicator for CVE profile $v_{i,k}$, with $e_{i,k}\in[0,1]$. |
 | $E_i(Q)$ | Applicability-weighted aggregate exploitability of device $d_i$. |
 | $p_i(t;Q)$ | Time-varying compromise proxy for device $d_i$. |
 | $\mathbf{1}\{\cdot\}$ | Indicator function. |
 | $\varepsilon$ | Non-negligible exploitability threshold used for applicability gates. |
 | $\sigma(x)$ | Logistic function, $1/(1+e^{-x})$. |
-| $\xi_i(t)\in[0,1]$ | Time-varying exposure signal for device $d_i$. |
+| $\xi_i(t)$ | Time-varying exposure signal for device $d_i$, with $\xi_i(t)\in[0,1]$. |
 | $\alpha,\beta$ | Weights for inherent exploitability and exposure, with $\alpha+\beta=1$. |
-| $w_{f,i}\in(0,1]$ | Criticality weight of device $d_i$ for function $f$. |
+| $w_{f,i}$ | Criticality weight of device $d_i$ for function $f$, with $w_{f,i}\in(0,1]$. |
 | $P_f(t;Q)$ | Bounded function-level compromise likelihood score. |
 | $C_f(t;Q)$ | Function-level consequence term. |
 | $\kappa_f$ | Base criticality of function $f$. |
@@ -95,7 +95,7 @@ part of the framework in which they appear.
 
 | Symbol | Meaning |
 | --- | --- |
-| $\pi:\mathbf{x}_t\mapsto\mathbf{a}_t$ | Scheduling policy mapping state to patch actions. |
+| $\pi$ | Scheduling policy mapping state to patch actions, $\pi:\mathbf{x}_t\mapsto\mathbf{a}_t$. |
 | $J(\pi)$ | Finite-horizon objective combining risk and operational burden. |
 | $D_t$ | Normalized operational burden at epoch $t$. |
 | $\tau_i$ | Offline duration required to patch device $d_i$. |
@@ -104,7 +104,7 @@ part of the framework in which they appear.
 | $H$ | Receding-horizon lookahead depth. |
 | $B$ | Candidate cap for branch expansion. |
 | $F$ | Frontier cap in the bounded lookahead search; distinct from the function set $\mathcal{F}$. |
-| $W=\min(t+H,T)$ | End of the current lookahead window. |
+| $W$ | End of the current lookahead window, $W=\min(t+H,T)$. |
 | $L=T-W$ | Remaining tail length after the lookahead window. |
 | $n$ | Search-node index. |
 | $\mathcal{U}^{(n)}$ | Patched-device set stored at search node $n$. |
