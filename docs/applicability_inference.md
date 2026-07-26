@@ -2,7 +2,7 @@
 
 The offline LLM applicability-inference step evaluates each CVE against the full
 device inventory. Parsed responses are converted into a fixed device-CVE
-applicability matrix $Q$, and the scheduler reads this matrix during forward
+applicability matrix $`Q`$, and the scheduler reads this matrix during forward
 search without calling the model.
 
 ## Prompt Template
@@ -44,8 +44,8 @@ DEVICE INVENTORY ({N} devices):
 | Decision labels | `APPLICABLE` is used when vendor lineage, product family/model, and affected version range match the CVE text. `NOT_APPLICABLE` is used when at least one of these fields definitively does not match. `UNCERTAIN` is used when the vendor lineage or product family may match, but the available CVE text or inventory lacks sufficient version, sub-family, or lineage information for a definitive decision. |
 | JSON schema | The required response is strict JSON with a single `decisions` array. Each element has `device_id`, `verdict` in `{APPLICABLE, NOT_APPLICABLE, UNCERTAIN}`, and a short `reason`. No prose outside the JSON object is allowed. |
 | Model versions and settings | The OpenAI run uses `o3` with `max_completion_tokens=6000`. The Gemini run uses `gemini-2.5-pro` with JSON response MIME type. The same prompt template and device inventory are used for both providers. |
-| Post-processing | Code fences are stripped before JSON parsing; if direct parsing fails, the first JSON object is extracted and parsed. Parsed verdicts are converted through the deterministic verdict-to-$Q$ mapping. Verdict labels outside the allowed set are assigned the uncertain weight rather than treated as hard applicable evidence. |
-| Verdict-to-$Q$ mapping | `APPLICABLE`, `NOT_APPLICABLE`, and `UNCERTAIN` are mapped to 1, 0, and $q_u$, respectively, with $q_u=0.5$ by default. The two-provider SCD matrix is the elementwise mean of the o3 and Gemini applicability weights. |
+| Post-processing | Code fences are stripped before JSON parsing; if direct parsing fails, the first JSON object is extracted and parsed. Parsed verdicts are converted through the deterministic verdict-to-$`Q`$ mapping. Verdict labels outside the allowed set are assigned the uncertain weight rather than treated as hard applicable evidence. |
+| Verdict-to-$`Q`$ mapping | `APPLICABLE`, `NOT_APPLICABLE`, and `UNCERTAIN` are mapped to 1, 0, and $`q_u`$, respectively, with $`q_u=0.5`$ by default. The two-provider SCD matrix is the elementwise mean of the o3 and Gemini applicability weights. |
 
 ## Representative Judgments
 

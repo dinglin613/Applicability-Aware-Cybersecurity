@@ -10,7 +10,7 @@ applicability matrix.
 
 | Input information | Engineering interpretation | Generated constraint |
 | --- | --- | --- |
-| Maintenance calendar for epoch $t$ | Patch actions are allowed only during approved maintenance windows. | C1: Maintenance window |
+| Maintenance calendar for epoch $`t`$ | Patch actions are allowed only during approved maintenance windows. | C1: Maintenance window |
 | Crew or staffing policy | Only a bounded number of devices can be patched concurrently. | C2: Staffing and concurrency |
 | SCL voltage-level, bay, and protection-zone assignment | Concurrent outages are limited within the same protection zone. | C3: Zone coordination |
 | IED-to-function mapping from device roles and logical functions | Each protection, control, observability, or automation function must retain a minimum number of online devices. | C4: Redundancy and availability |
